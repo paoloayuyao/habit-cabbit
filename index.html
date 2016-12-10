@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>HabiTrack</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Kalam" rel="stylesheet">
+  <!--build:css css/app.min.css -->
+  <!-- bower:css -->
+  <!-- endbower -->
+
+
+  <link rel="stylesheet" href="assets/css/main.css"/>
+  <!-- endbuild -->
+
+
+  <style>
+    body {
+      background-image:url(assets/img/geometry.png);
+      padding-bottom: 70px;
+    }
+  </style>
+</head>
+<body ng-app="app">
+<toast></toast>
+
+<ui-view></ui-view>
+
+
+
+<!--build:js js/bower.min.js -->
+<!-- bower:js -->
+<!-- endbower -->
+<!-- endbuild -->
+
+<script>
+  var config = {
+    apiKey: "AIzaSyAc135wiLLb3qZ6SLTFFio1Xzu7RiSGtkM",
+    authDomain: "habitrack-edd40.firebaseapp.com",
+    databaseURL: "https://habitrack-edd40.firebaseio.com",
+    storageBucket: "habitrack-edd40.appspot.com",
+    messagingSenderId: "233129207358"
+  };
+  firebase.initializeApp(config);
+</script>
+
+<!--build:js js/app.min.js -->
+<!-- inject:js -->
+<!-- endinject -->
+<!-- endbuild -->
+
+</body>
+</html>

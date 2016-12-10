@@ -1,0 +1,48 @@
+{
+  "name": "habitrack",
+  "version": "0.0.0",
+  "dependencies": {
+    "angular": "^1.4.0",
+    "angular-animate": "^1.4.0",
+    "angular-cookies": "^1.4.0",
+    "angular-resource": "^1.4.0",
+    "angular-route": "^1.4.0",
+    "angular-sanitize": "^1.4.0",
+    "angular-touch": "^1.4.0",
+    "angular-ui-router": "^1.0.0",
+    "restangular": "^1.5.2",
+    "bootstrap": null,
+    "angular-bootstrap": "^2.2.0",
+    "angularfire": "^2.1.0",
+    "bootstrap-social": "^5.0.0",
+    "font-awesome": "^4.5",
+    "firebase": "^3.6.1",
+    "angular-ui": "^0.4.0",
+    "angular-ui-bootstrap": "^2.3.0",
+    "awesome-bootstrap-checkbox": "^0.3.7",
+    "angular-toastr": "^2.1.1",
+    "ngToast": "ngtoast#^2.0.0"
+  },
+  "devDependencies": {
+    "angular-mocks": "^1.4.0",
+    "angular-bootstrap": "^2.2.0"
+  },
+  "appPath": "app",
+  "moduleName": "habitrackApp",
+  "overrides": {
+    "bootstrap": {
+      "main": [
+        "dist/css/bootstrap.css"
+      ]
+    },
+    "font-awesome": {
+      "main": [
+        "css/font-awesome.css"
+      ]
+    }
+  },
+  "resolutions": {
+    "font-awesome": "~4.5",
+    "angular": "1.6.0"
+  }
+}

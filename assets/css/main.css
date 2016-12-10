@@ -1,0 +1,67 @@
+.table-responsive > .table > tbody > tr > td, .table-responsive > .table > thead > tr > th {
+  padding: 1px;
+}
+
+.fade-in-out {
+  transition: 500ms linear all;
+  opacity: 1;
+}
+
+.fade-in-out.ng-hide {
+  opacity: 0;
+}
+
+.animate-repeat {
+  line-height:30px;
+  list-style:none;
+  box-sizing:border-box;
+}
+
+.animate-repeat.ng-move,
+.animate-repeat.ng-enter,
+.animate-repeat.ng-leave {
+  transition:all linear 0.5s;
+}
+
+.animate-repeat.ng-leave.ng-leave-active,
+.animate-repeat.ng-move,
+.animate-repeat.ng-enter {
+  opacity:0;
+  max-height:0;
+}
+
+.animate-repeat.ng-leave,
+.animate-repeat.ng-move.ng-move-active,
+.animate-repeat.ng-enter.ng-enter-active {
+  opacity:1;
+  max-height:30px;
+}
+
+.dark-primary-color    { background: #388E3C; }
+.default-primary-color { background: #4CAF50; }
+.light-primary-color   { background: #C8E6C9; }
+.text-primary-color    { color: #FFFFFF; }
+.accent-color          { background: #9E9E9E; }
+.primary-text-color    { color: #212121; }
+.secondary-text-color  { color: #757575; }
+.divider-color         { border-color: #BDBDBD; }
+
+.navbar {
+  margin-bottom: 0;
+  border: none;
+  border-radius: 0px;
+}
+
+.navbar > .navbar-collapse > .nav > li > a, .navbar > .navbar-header > .navbar-brand {
+  color: #FFFFFF;
+}
+
+.padded-nav {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.linkfooter{
+  border-top: 1px solid #EEEEEE;
+  border-color: #EEEEEE;
+}

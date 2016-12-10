@@ -1,0 +1,130 @@
+<div class="container-fluid" >
+
+<!--
+  <div class="row default-primary-color">
+    <div class="col-md-12">
+      <br/>
+    </div>
+  </div>
+-->
+
+  <div class="row default-primary-color padded-nav">
+    <div class="col-md-3">
+      <form ng-submit="taskCtrl.addHabit()" class="fade-in-out">
+        <div class="input-group">
+          <input ng-disabled="taskCtrl.loading" ng-model="taskCtrl.newHabit" type="text" class="form-control"
+                 placeholder="New Habit"
+                 aria-describedby="basic-addon2" required>
+          <span class="input-group-btn">
+            <button class="btn btn-default" type="submit">
+            <span class="glyphicon glyphicon-plus"></span></button>
+          </span>
+        </div>
+      </form>
+    </div>
+    <div class="col-md-6 text-center">
+      <i ng-show="taskCtrl.loading" class="fa fa-circle-o-notch fa-spin fade-in-out" style="font-size:36px"></i>
+    </div>
+    <div class="col-md-3 ">
+
+    </div>
+  </div>
+
+<!--  <div class="row default-primary-color">
+    <div class="col-md-12">
+      <br/>
+    </div>
+  </div>-->
+
+  <div class="row" style="background: #F8F8F8; opacity: 0.7;" ng-show="taskCtrl.tasks.length > 1">
+    <div class="col-md-12">
+
+      <div class="table-responsive visible-lg visible-md fade-in-out">
+        <table class="table">
+          <thead>
+          <tr>
+            <td>
+            </td>
+
+            <td>
+            </td>
+            <td ng-repeat="i in taskCtrl.days" class="animate-repeat">
+              <small>{{$index + 1}}</small>
+            </td>
+          </tr>
+          </thead>
+          <tbody>
+          <tr ng-repeat="task in taskCtrl.tasks" ng-show="task.name.length > 0" class="animate-repeat">
+            <td style="padding: 12px">
+              {{task.name}}
+            </td>
+            <td style="padding: 12px">
+              <div style="color: darkred">
+                <span ng-click="taskCtrl.delete(task)" class="glyphicon glyphicon-remove"></span>
+              </div>
+            </td>
+            <td ng-repeat="i in taskCtrl.days" class="animate-repeat">
+
+              <div class="checkbox checkbox-success">
+                <input ng-change="taskCtrl.synchronize(task)" ng-model="task.days[i]" type="checkbox"
+                       id="{{'taskBox' + i}}">
+                <label/>
+              </div>
+
+            </td>
+
+          </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="table-responsive visible-xs visible-sm fade-in-out" style="margin-top: 12px">
+        <table class="table">
+          <thead>
+          <tr>
+            <td>
+            </td>
+
+            <td>
+            </td>
+            <td ng-repeat="i in taskCtrl.days" ng-show="taskCtrl.show(i)" class="animate-repeat">
+              <small>{{$index + 1}}</small>
+            </td>
+          </tr>
+          </thead>
+          <tbody>
+          <tr ng-repeat="task in taskCtrl.tasks" ng-show="task.name.length > 0" class="animate-repeat">
+            <td style="padding: 12px">
+              {{task.name}}
+            </td>
+            <td style="padding: 12px">
+              <div style="color: darkred">
+                <span ng-click="taskCtrl.delete(task)" class="glyphicon glyphicon-remove"></span>
+              </div>
+            </td>
+            <td ng-repeat="i in taskCtrl.days" ng-show="taskCtrl.show(i)" class="animate-repeat">
+              <div class="checkbox checkbox-success" ng-mouseover="">
+                <input ng-change="taskCtrl.synchronize(task)" ng-model="task.days[i]" type="checkbox"
+                       id="{{'taskBoxXs' + i}}">
+                <label/>
+              </div>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+
+
+    </div>
+  </div>
+
+
+</div>
+
+
+
+
+
+
+
+

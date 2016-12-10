@@ -1,0 +1,21 @@
+    <nav class="navbar navbar-default dark-primary-color" role="navigation">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" ng-click="isNavCollapsed = !isNavCollapsed">
+          <span class="sr-only">Toggle navigation</span>
+          <span style="background-color: white" class="icon-bar"></span>
+          <span style="background-color: white" class="icon-bar"></span>
+          <span style="background-color: white" class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#" style="font-family: 'Kalam', cursive; margin-top: 2px">Don't break the chain!</a>
+      </div>
+      <div class="navbar-collapse collapse" uib-collapse="isNavCollapsed">
+        <ul class="nav navbar-nav">
+          <li><a ui-sref="#" class="text-primary-color">Home</a></li>
+          <li><a ui-sref="#" class="text-primary-color">Habits</a></li>
+          <li><a ui-sref="#" class="text-primary-color">About</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a ng-show="navMenuCtrl.showLogout" ng-click="navMenuCtrl.logout()" ui-sref="#">Logout</a></li>
+        </ul>
+      </div>
+    </nav>
