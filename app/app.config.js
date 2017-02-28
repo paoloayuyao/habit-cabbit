@@ -57,10 +57,9 @@ angular.module('app').config(['$stateProvider','$urlRouterProvider', '$locationP
 
   AuthFactory.$onAuthStateChanged(function (firebaseUser) {
     if (firebaseUser) {
-      console.log('CONFIGUUUU firebase user ready');
       $rootScope.currentUser = firebaseUser;
     } else {
-      console.log('CONFIGUUUU firebase user is NOT ready');
+
     }
   })
 

@@ -36,6 +36,20 @@
     </div>
   </div>-->
 
+  <div ng-show="taskCtrl.tasks.length < 2" class="row fade-in-out" style="margin-top: 12px; opacity: .6">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+
+        <h4>Hello!</h4>
+        <p>There doesn't seem to be anything here. Feel free to use the field on the top-left of the screen to add the first habit you want to build!</p>
+        <p>It can be as simple or grand as you want. We're here to help you get started. </p>
+
+        <p><a class="btn btn-success" href="#" role="button">Learn more</a></p>
+
+    </div>
+    <div class="col-md-3"></div>
+  </div>
+
   <div class="row" style="background: #F8F8F8; opacity: 0.7;" ng-show="taskCtrl.tasks.length > 1">
     <div class="col-md-12">
 

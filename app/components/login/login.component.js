@@ -46,7 +46,7 @@
 
       var auth = $firebaseAuth();
 
-      auth.$signInWithPopup("google").then(function (response) {
+      auth.$signInWithRedirect("google").then(function (response) {
         var user = response.user;
         console.log('login complete, waiting for onauth listener')
       }).catch(function (error) {
